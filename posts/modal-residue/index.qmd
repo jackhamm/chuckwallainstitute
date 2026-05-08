@@ -1,0 +1,357 @@
+---
+title: "A Note on the Persistence of Identity Across Branched Worlds: The Modal-Residue Problem and Its Implications for the Everett Interpretation"
+description: "On a structural feature of the relative-state formulation that has not, to my knowledge, been previously articulated, and on the inadequacy — *prima facie*, and on close examination — of the existing treatments to address it."
+author:
+  - name: "L. Bristlecone"
+    affiliation: "Visiting Philosopher in Residence, Chuck Walla Institute"
+date: "2003-09-17"
+date-format: "D MMMM YYYY"
+categories: [foundations, Everett interpretation, philosophy of physics]
+bibliography: ../../references.bib
+---
+
+## §1 — Preliminaries; or, what has been overlooked
+
+The literature on the relative-state formulation of quantum
+mechanics, descended from @everett1957 and elaborated, with varying
+degrees of fidelity, by @dewitt1970 and a small but vigorous
+subsequent tradition, has tended — I think it must be said, with
+some regret — to focus its attention on questions of, on close
+examination, relatively minor importance, while leaving largely
+undiscussed the question that, on yet closer examination, turns out
+to be the central one. The question I have in mind is *not*, *pace*
+a good deal of the recent literature, the question of how
+*probability* is to be assigned to the resulting branches; that
+question has, in my view, received considerably more attention than
+it deserves, and I shall treat it, in §6, only briefly, and only in
+order to indicate where I take its proper subordination to lie.
+The question I have in mind is, rather, the question of what
+becomes — *qua* identity-bearer — of the *individual* who is said
+to undergo a branching event: a question that has been treated,
+where it has been treated at all, with insufficient attention to
+the *de re / de dicto* distinction, and which I shall, in this
+note, attempt to set out with some care.
+
+The position I shall defend is, in outline, the following. The
+*individual*, considered *qua* the bearer of de re properties, does
+not, on a careful examination, persist across the branching event
+in *either* of the senses ordinarily attributed to him; the manner
+in which this failure of persistence is to be understood reveals —
+somewhat surprisingly, but, I think, ultimately conclusively — a
+structural feature of the Everett interpretation that has not, to
+my knowledge, been previously articulated in the literature. I
+shall call this feature the *modal residue* of
+branched-identity-*qua*-identity, and I shall argue that any account
+of the Everett interpretation that fails to address it is, in a
+precise sense to be made out below, *prima facie* incomplete.
+
+## §2 — On the Several Senses of *branching*
+
+Before we can profitably engage the question, however, it will be
+necessary to distinguish, with some care, between several distinct
+senses in which the term *branching* is used in the relevant
+literature, of which I shall identify three, although I am inclined
+to think — *pace* the unhelpfully reductive treatment of
+@stenner1992 — that a more refined taxonomy might in due course
+distinguish as many as seven.
+
+The first sense of *branching*, which I shall call
+*branching-as-Fission*, is the sense in which a single antecedent
+state gives rise, by the unitary evolution of the joint
+system-and-apparatus, to two posterior states, *each of which is
+equally a continuation* of the antecedent state. This sense is,
+broadly speaking, the sense employed by @lewis1976 in the analogous
+case of personal fission, and it has been imported into the
+quantum case by, *inter alia*, @pembertonhughes1987 — though, it
+must be said, with insufficient attention to the differences
+between the modal structure of the macroscopic and the quantum
+cases, a point to which we shall return in §4.
+
+The second sense, which I shall call *branching-as-Multiplication*,
+treats the resulting branches as numerically distinct individuals,
+each of which has *come into being* at the moment of branching,
+and *neither* of which is to be identified with the antecedent.
+This is, I take it, the sense most natural to the *de dicto*
+reading of identity-claims; whether it is the right reading is a
+matter to which we shall return.
+
+The third sense — and the most subtle — is what I shall call
+*branching-as-Selection*: on this view, only *one* of the resulting
+branches is, *strictly speaking*, the continuation of the
+antecedent, the others being, in some sense to be made out, *modal
+residues* of the original individual. This is the sense whose
+articulation is the principal task of the present note, and to
+which, accordingly, we now turn.
+
+The careful reader will observe that the three senses are not, on
+their face, mutually consistent; this is not, however, a defect of
+the taxonomy but a feature of the underlying problem, which has
+been obscured — I am sorry to say — by the loose usage of the term
+"branching" in the recent literature.
+
+## §3 — The *De Re* Reading of Branched-Identity-*qua*-Identity
+
+Let us suppose, for the sake of definiteness, that an individual
+*A*, prior to a branching event, possesses the de re property *F*.
+The question we wish to ask is: of the two posterior individuals,
+*A_1* and *A_2*, which (if either, or neither, or both) possesses
+the property *F* in the same sense in which *A* possessed it?
+
+It is, I think, instructive to consider three possible answers.
+
+The *first* answer — which I shall call the *Quasi-Lewisian*
+answer, after the analogous treatment in @lewis1976 — is that both
+*A_1* and *A_2* possess *F*, and that each does so in *exactly*
+the same sense in which *A* possessed it; on this view, the
+property *F* has, as it were, *propagated forward* into both
+branches, *salva veritate*. This answer has the merit of
+simplicity. It has, however, in my view, the disadvantage that it
+leaves wholly unaddressed the *modal* aspect of *F*, which is to
+say: the question of whether the *F* possessed by *A_1* is *the
+same F* possessed by *A*, or merely a *qualitative duplicate* of
+it — a distinction that, I take it, no careful philosopher of
+language would wish to elide.
+
+The *second* answer is that *neither* *A_1* nor *A_2* possesses
+*F* in the sense in which *A* possessed it, since *A* has, by the
+branching event, *ceased to exist*, and the property *F*, having
+lost its bearer, has accordingly become — in a phrase I shall
+borrow, with thanks, from @vaihinger1911 — a *fictive predicate*.
+This answer, while not without its merits, requires us to accept
+a metaphysical conclusion of considerable strength, namely the
+*non-identity* of the post-branching individuals with the
+antecedent, and I confess I am unable to do so without further
+argument.
+
+The *third* answer — which I shall defend — is that the property
+*F*, as possessed by *A*, is *neither* possessed by *A_1* in the
+same sense, *nor* possessed by *A_2* in the same sense, *nor*
+possessed by both in some compound sense, *nor* lost altogether:
+it is, rather, *modally distributed* across the two branches in a
+manner that the existing literature has not adequately
+characterized. The unaddressed remainder, when the standard
+taxonomy is applied to the case, is what I shall call the *modal
+residue*.
+
+## §4 — The Modal-Residue Problem
+
+The modal residue may be characterized, with some attempt at
+precision, as follows. Let *A_1* and *A_2* be the two posterior
+individuals, and let *f_1* and *f_2* denote the post-branching
+counterparts of the property *F* — that is, the properties which
+stand to *F* as *A_1* and *A_2* stand, respectively, to *A*. Then
+the modal residue *R* is defined by
+
+— here I lapse, with apology to the more mathematically inclined
+among my readers, into a notation borrowed from @pembertonhughes1987,
+adapted (with some technical modifications) for the present case —
+
+$$
+R(F;\,A_{1},A_{2}) \;\equiv\; F(A) \;-\; \bigl[\,f_{1}(A_{1}) \;\oplus\; f_{2}(A_{2})\,\bigr],
+$$ {#eq-modal-residue}
+
+where ⊕ denotes the *modal sum* of the post-branching properties,
+in the sense due to @stenner1992. The quantity *R*, which is in
+general non-zero, represents the portion of the antecedent property
+*F* that has *not* been recovered by either of the post-branching
+counterparts, and which therefore, if the analysis is to be coherent,
+must be assigned a place somewhere in the modal landscape. The
+question — and it is a question, I think, of the first importance —
+is *where*.
+
+It will be objected, no doubt, that I have not yet specified what
+the modal sum ⊕ is supposed to be, nor in what space the quantity
+*R* of @eq-modal-residue is to be regarded as living. I shall, in
+§5, argue that these subsidiary questions have been adequately
+addressed in the literature — though, again, only by careful
+philosophers — and that the principal remaining task is the
+application of the resulting machinery to the case at hand. For
+the moment, however, I wish only to insist on the following: that
+the modal residue is a *real quantity*, that it is in general
+*non-zero*, and that any account of the Everett interpretation
+which does not provide for its *placement* leaves the metaphysics
+of the situation in a condition that no careful reader can find
+satisfactory.
+
+The matter is, I think it must be said, somewhat surprising. One
+would have expected the philosophical community, in the four
+decades since @everett1957, to have arrived at a settled view on
+the placement of *R*; and that this has not happened — that, on
+the contrary, the question has not, so far as I can determine,
+been *posed* in the form I have given it — is itself a fact about
+the recent literature that deserves comment, though I shall not
+here undertake to make that comment, *salva veritate*, in the
+form it deserves.
+
+## §5 — The Inadequacy of the Existing Treatments
+
+The recent literature on the Everett interpretation — which is to
+say, broadly, the literature that has accumulated since @dewitt1970
+and the early commentaries — has not, on the whole, attended to
+the modal-residue problem in the form in which I have set it out,
+and has accordingly, I think it is fair to say, fallen short of
+providing a complete account of the metaphysics of branching.
+Several treatments deserve mention.
+
+@stenner1992, in a much-overlooked monograph, set out a notion of
+*modal aggregation* that, while not framed in the terms I have used
+here, is structurally close to what I have called *modal sum*; it
+would, I believe, repay further attention from those willing to
+follow the argument through the seventh chapter, where the
+notation, on first encounter, is admittedly somewhat forbidding.
+@pembertonhughes1987, who introduced the notation I have above
+adopted, applied it — owing, I think, to insufficient familiarity
+with the *de re / de dicto* distinction — to a question rather
+different from the one I have addressed, with the result that his
+conclusions, while suggestive, are *prima facie* unsuited to the
+present case.
+
+The recent decision-theoretic literature on the so-called
+"probability problem" of the Everett interpretation, of which I am
+aware in outline, has not, to my knowledge, addressed the
+modal-residue question at all; and while I have no objection in
+principle to decision-theoretic methods — they have, in their
+proper sphere, an unimpeachable distinguished history — I am
+inclined to think that, in the present context, they have been
+deployed in pursuit of the wrong question. The probability
+problem, on the analysis I have offered, is a *consequence* of the
+modal-residue problem, rather than an independent question, and
+its treatment in advance of the prior question is therefore, in a
+precise sense, putting the cart before the horse. The proper
+order of investigation is: first the residue, then the probability;
+the literature has, regrettably, proceeded in the reverse order.
+
+A treatment that does not address the modal residue will, *a
+fortiori*, be unable to distinguish — for reasons I shall not here
+elaborate, though I have done so at greater length in correspondence
+— between the Quasi-Lewisian, the *fictive*, and the *modally
+distributed* readings, and will accordingly produce conclusions
+about the metaphysics of branching that are not, *strictly
+speaking*, conclusions at all, but rather *prima facie* claims
+awaiting the further analysis I have undertaken to provide.
+
+## §6 — The *Pemberton-Hughes Move*: A Reply
+
+It will be objected by some — and the objection has been made to
+me, in correspondence, with characteristic vigor — that the
+modal-residue problem has, in fact, been addressed, by
+@pembertonhughes1987 and the small subsequent tradition, in the
+form of what is now sometimes called the *Pemberton-Hughes Move*:
+namely, the proposal that the modal residue is, in all cases of
+physical interest, identically zero, on the grounds that the
+properties *f_1* and *f_2* together *exhaust* the modal content of
+the antecedent property *F*, leaving, *ex hypothesi*, no remainder.
+
+I am not persuaded.
+
+The Pemberton-Hughes Move depends, *in essence*, on the assumption
+that the modal sum ⊕ is, in the relevant cases, *complete* — an
+assumption that, on close inspection, is equivalent to the very
+claim that there is no modal residue, and which is therefore in
+danger of begging the question it purports to settle. I have
+argued elsewhere — though without, I should concede, the technical
+apparatus that the present note provides — that the assumption of
+completeness is, in general, unwarranted, and that the residue is,
+in cases of philosophical interest, non-trivially non-zero. The
+Pemberton-Hughes Move thus collapses, as a defense of completeness,
+into a restatement of the position it was meant to defend; the
+collapse is, I think, *complete* in a sense more interesting than
+the one Pemberton-Hughes intended.
+
+A further reply has been suggested to me — again in correspondence
+— to the effect that one might dispense with the modal sum
+altogether, and treat the post-branching individuals as fully
+constituted in their own right, with no residue to be placed. This
+reply, while ingenious, runs aground on the *de re* aspect of the
+property *F* in the manner I have already indicated in §3, and I
+shall not here belabor the point.
+
+## §7 — Resolution; or, Where the Matter Stands
+
+I have argued, in outline, the following: that the question of
+identity in the Everett interpretation has been treated, in the
+existing literature, with insufficient attention to the *de re /
+de dicto* distinction; that the *de re* reading, properly developed,
+gives rise to what I have called the modal-residue problem, of
+which the principal mathematical content is captured by
+@eq-modal-residue; and that no extant treatment of the Everett
+interpretation provides an adequate placement of the modal residue,
+with the consequence that the standard accounts are, in a precise
+sense, incomplete.
+
+What, then, is the upshot? I am inclined, on balance, and *pace*
+the suggestion of @pembertonhughes1987 to the contrary, to think
+that the modal residue is to be located in what one might call the
+*intermediate modal space* between the two post-branching branches
+— that is, in the region whose ontological status has, in the past,
+been variously denied, ignored, or fictively assigned, but whose
+existence is, on the present account, both necessary and
+metaphysically respectable. The branches are, on this view, not
+the *whole* of the post-branching reality; they are, rather, two
+regions of a larger structure, the remaining portion of which is
+the modal residue. The Everett interpretation, properly
+understood, is therefore not a *two-branch* theory but a
+*branched-with-residue* theory — a position whose implications I
+shall not, in the present note, attempt to develop, but which I
+commend to the attention of those interested in the foundations of
+quantum mechanics, and which I shall pursue at greater length in a
+forthcoming monograph.
+
+The matter is, I take it, on close examination, settled — though
+not, perhaps, in the sense that has been ordinarily assumed.
+
+I look forward to correspondence with my colleagues at the
+Institute on these and related matters, and to my next visit, in
+the autumn.
+
+— *L. Bristlecone*
+
+---
+
+## Editorial responses
+
+> *The "modal residue" introduced in §4 has, so far as I can
+> establish, no representation in the Hilbert space on which the
+> formalism of @everett1957 is defined; the operation ⊕ is similarly
+> unspecified in any sense that an inner product would recognize.
+> The canonical interpretive question — the recovery of the Born
+> rule — is not engaged in the present note.*
+>
+> — *M. Yucca, 22 September 2003*
+
+> *L. Bristlecone has, with characteristic care, set out a problem
+> and offered a resolution. I read the note with attention, on the
+> porch, after supper. I find I have one small question, which I
+> shall pose in the simplest terms I can manage.*
+>
+> *Suppose, for a moment, that I were to grant the modal-residue
+> problem of branched-identity-qua-identity in the form set out in
+> §4, and to grant further that the Pemberton-Hughes Move (§6) is
+> to be rejected for the reasons given. The matter would then
+> stand, as L. Bristlecone has it, with the residue placed in the
+> intermediate modal space between the branches. Now suppose,
+> alternatively, that I were to grant the Pemberton-Hughes Move and
+> to deny the existence of any non-trivial residue. The matter
+> would then stand otherwise.*
+>
+> *My question is this: what experimental fact, or observation, or
+> calculation — even one in principle, even one I cannot now
+> specify but might in some imagined laboratory carry out — would
+> come out differently between the two cases? I ask in good faith.
+> If the answer is that no such fact exists, then we are in a region
+> of philosophy whose problems we at the Institute have, by long
+> experience, found do not yield well to further elaboration. The
+> region contains real problems and unreal ones, and I am not
+> always sure I can tell them apart from the porch.*
+>
+> *In any event, a glass has been set aside, against your next
+> visit, for the productive disagreement we shall by then have had.
+> The cottonwoods are coming on; you would, I think, find the
+> property pleasant in October.*
+>
+> — *D. R. Caldera, 1 October 2003*
+
+## References
+
+::: {#refs}
+:::
