@@ -22,3 +22,4 @@ what it reaches for, what it refuses to say — without ever being declared.
 | [yucca.md](yucca.md) | M. Yucca | Senior Fellow (EFTs, anomalous moments) |
 | [ocotillo.md](ocotillo.md) | A. Ocotillo | Fellow (lattice, Schwinger model) |
 | [mesquite.md](mesquite.md) | E. Mesquite | Corresponding member (observational) |
+| [cholla.md](cholla.md) | R. Cholla | Independent affiliate (Casimir energies) |
