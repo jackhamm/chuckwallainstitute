@@ -1,0 +1,168 @@
+---
+title: "Olbers' Paradox at Three a.m. in Joshua Tree"
+description: "On why the night sky is dark — even in the desert, where the case against the dark night sky is at its strongest."
+author:
+  - name: "E. Mesquite"
+    affiliation: "Corresponding member, Chuck Walla Institute"
+date: "1988-08-17"
+date-format: "D MMMM YYYY"
+categories: [cosmology, observational, pedagogy]
+bibliography: ../../references.bib
+---
+
+## A complaint, properly registered
+
+The author was lately persuaded to spend a clear August night on the
+basalt boulders north of the Institute, and reports that the sky
+between three and four in the morning, with the moon below the horizon
+and Yucca Valley sleeping, contained more stars than he had previously
+believed possible. He further reports — and this is the substance of
+the present note — that the spaces *between* the stars were nevertheless
+black.
+
+The observation is so familiar as to be invisible. But Heinrich Olbers,
+in 1823, raised it as a difficulty [@olbers1823]: in an infinite,
+eternal, static universe filled uniformly with stars, the night sky
+should be *not* dark, but everywhere as bright as the surface of the
+average star. Whence the discrepancy?
+
+## The static-universe argument
+
+Consider a universe of infinite extent, in which stars of mean
+luminosity $L$ are distributed with uniform number density $n$, and in
+which the geometry is Euclidean and static. Consider a thin spherical
+shell of radius $r$ and thickness $dr$ centered on the observer. The
+shell contains $4\pi r^{2} n\, dr$ stars, each delivering a flux at
+the observer of $L / 4\pi r^{2}$. The total flux from the shell is
+therefore
+
+$$
+dF \;=\; \frac{L}{4\pi r^{2}} \cdot 4\pi r^{2} n\, dr \;=\; n L \,dr.
+$$ {#eq-shell}
+
+The two factors of $r^{2}$ cancel: every shell contributes equally,
+regardless of its distance. Integrating from the observer outward,
+
+$$
+F \;=\; \int_{0}^{\infty} n L \,dr \;=\; \infty.
+$$ {#eq-divergent}
+
+The night sky should be infinitely bright. Even granting that nearer
+stars eventually occlude more distant ones, a thermodynamic
+re-derivation due to @harrison1987 shows that in steady state the sky
+must reach the surface temperature of the average star — some thousands
+of kelvin. This is unambiguously not what one observes from Joshua Tree.
+
+## The resolutions, in order of importance
+
+The correct response is twofold and was, by the 1960s, broadly settled
+[@harrison1987; @wesson1991]:
+
+1. **The universe has a finite age.** Only stars within a light-travel
+   distance of approximately $c\,t_{*} \sim 10^{10}$ light-years can
+   have contributed photons to tonight's sky. The integral
+   @eq-divergent is therefore cut off at finite $r$.
+2. **The universe is expanding.** Photons from distant stars arrive
+   redshifted, with their energies reduced by a factor $(1+z)^{-1}$
+   and their arrival rate reduced by a further $(1+z)^{-1}$. The
+   intensity from a shell at redshift $z$ is therefore suppressed by
+   $(1+z)^{-4}$.
+
+The first effect is the dominant one. The second is, on its own,
+insufficient to resolve the paradox; @harrison1987 makes this point
+emphatically. But together they reduce the integrated extragalactic
+background light to a value many orders of magnitude below the surface
+brightness of the Milky Way's foreground stars, which is what the eye
+actually sees as it adapts in the dark.
+
+## Numerics
+
+We compute the cumulative surface brightness of the night sky as a
+function of the cutoff distance, comparing the static-Euclidean case
+@eq-divergent to a finite-age, expanding model.
+
+```{python}
+#| label: fig-cumulative
+#| fig-cap: "Cumulative night-sky surface brightness as a function of distance, in arbitrary units. *Black:* the static-infinite universe of @eq-divergent. *Rust:* a flat $\\Lambda$CDM model with $H_{0}=70\\,\\text{km/s/Mpc}$, $\\Omega_{m}=0.3$, finite age $t_{0}\\approx 1.4 \\times 10^{10}\\,\\text{yr}$. The expanding-universe curve plateaus; the static one does not."
+#| fig-width: 7
+#| fig-height: 4.4
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Comoving distances in Gly
+r = np.linspace(0.001, 80, 4000)
+
+# Static infinite: F(r) ~ r (linear, diverges)
+F_static = r.copy()
+
+# Toy expanding-universe: integrand = exp(-r/14) * (1+z)^{-4}
+# with redshift approximated by Hubble: z ≈ H0 r / c, so for r in Gly with t_0=14 Gly,
+# z ≈ r / (c/H0) ~ r / 14 Gly.
+t0 = 14.0  # Hubble distance in Gly (rough)
+z_of_r = r / t0
+suppression = (1 + z_of_r)**(-4) * np.exp(-r/t0)  # crude horizon cutoff
+F_expand = np.cumsum(suppression) * (r[1]-r[0])
+
+fig, ax = plt.subplots()
+ax.plot(r, F_static, color="#2b2118", lw=1.8, label="static, infinite (Olbers)")
+ax.plot(r, F_expand, color="#a0522d", lw=2.2, label=r"expanding, finite-age ($\Lambda$CDM, schematic)")
+ax.axvline(t0, color="#7a8b6f", ls=":", lw=1.2, alpha=0.8)
+ax.text(t0+1, F_expand[-1]*0.45, "Hubble distance",
+        color="#4f5e48", fontsize=9, fontstyle="italic")
+ax.set_xlabel("cutoff distance $r$ (Gly)")
+ax.set_ylabel("integrated flux  (arb. units)")
+ax.set_xlim(0, 80)
+ax.legend(loc="upper left", framealpha=0.9)
+ax.grid(alpha=0.2)
+ax.set_facecolor("#faf3e3")
+fig.patch.set_facecolor("#faf3e3")
+for spine in ax.spines.values():
+    spine.set_color("#7a3b1f")
+plt.tight_layout()
+plt.show()
+```
+
+The plateau in the rust-colored curve is the resolution of the paradox.
+A finite-age, expanding universe deposits a *finite* photon density on
+the night sky.
+
+## What one actually sees from the Mojave
+
+The integrated extragalactic background, once we account for the
+factors above, is approximately $10\,\text{nW/m}^{2}/\text{sr}$ — a
+number many orders of magnitude below the threshold of dark-adapted
+human vision. What the eye sees in a truly dark sky (the Bortle 1 of
+amateur astronomers, attainable with some effort in the desert
+Southwest) is, in order of decreasing brightness:
+
+1. *Airglow* — recombination in the upper atmosphere — at perhaps
+   $10^{-7}\,\text{W/m}^{2}/\text{sr}$.
+2. The integrated light of unresolved Milky Way stars.
+3. Zodiacal light from interplanetary dust.
+4. Faintly, on the very darkest nights, the diffuse light from
+   unresolved galaxies — an experimentally measurable quantity, as
+   verified now by *COBE*'s DIRBE [@hauser1998].
+5. Below all of these, the cosmic microwave background — invisible
+   to the eye, but present everywhere on the sky at $T = 2.7\,\text{K}$.
+
+The CMB is, in a precise sense, *the* answer to Olbers: it *is* the
+hot wall predicted by the static-universe argument, redshifted by the
+expansion from a few thousand kelvin down to its present three.
+The night sky is dark because the universe expanded.
+
+## A closing observation
+
+The Institute's outdoor blackboard, on the evening in question,
+remained legible by starlight alone for some forty minutes after the
+last lantern was extinguished. The legibility is, when one thinks about
+it, a quietly extraordinary fact: it depends on the Hubble parameter,
+the matter content of the universe, and the surface temperature of
+G-type stars three to four kiloparsecs distant. We mention this not
+as a discovery, but to suggest that some of the Institute's better
+seminars take place out of doors.
+
+## References
+
+::: {#refs}
+:::
