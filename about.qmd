@@ -1,0 +1,31 @@
+---
+title: "About"
+---
+
+## History
+
+The Institute was incorporated in **1974** as a non-profit research foundation,
+on land donated by the estate of an amateur naturalist who had cataloged
+the local population of *Sauromalus ater* — the common chuckwalla — for which
+the Institute is, somewhat whimsically, named.
+
+The founding charter commits the Institute to three activities:
+
+1. The unhurried study of quantum field theory.
+2. The publication of short, careful notes on questions of pedagogical interest.
+3. The maintenance of a small library of physics monographs and a working
+   blackboard.
+
+## Facilities
+
+- A library of approximately 4,200 volumes, with a particular strength in
+  mid-century field-theory texts.
+- Three offices, a seminar room seating twelve, and an outdoor blackboard
+  shaded by a ramada.
+- A modest computational allocation, used principally for symbolic algebra
+  and one-loop integrals.
+
+## Contact
+
+Correspondence may be sent to the Institute care of P.O. Box 84, Joshua Tree,
+California. Electronic mail is read on Tuesdays.

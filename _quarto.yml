@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - CNAME
+
+website:
+  title: "Chuck Walla Institute of Advanced Physics"
+  description: "An independent research institute studying quantum field theory and time in the high desert."
+  site-url: https://chuckwalla.institute
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Institute
+      - href: posts.qmd
+        text: Notes & Preprints
+      - href: people.qmd
+        text: Faculty
+      - href: about.qmd
+        text: About
+  page-footer:
+    center: "Chuck Walla Institute of Advanced Physics · Six Mile Spring, NV · est. 1974"
+    background: light
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+    toc: true
+    toc-location: right
+    code-link: true
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    smooth-scroll: true
+    link-external-newwindow: true
+    mainfont: "EB Garamond, Garamond, Georgia, serif"
+    monofont: "JetBrains Mono, Menlo, monospace"
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:wght@500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    html-math-method: mathjax
+    css: styles.css
+
+execute:
+  freeze: auto
+
+bibliography: references.bib

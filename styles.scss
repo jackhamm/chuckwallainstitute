@@ -1,0 +1,172 @@
+/*-- scss:defaults --*/
+
+// Desert palette
+$sand:        #e8d5a8;
+$sandstone:   #d9b382;
+$rust:        #a0522d;
+$canyon:      #7a3b1f;
+$sage:        #7a8b6f;
+$sage-dark:   #4f5e48;
+$ink:         #2b2118;
+$cream:       #faf3e3;
+$dusk:        #b8794f;
+$shadow:      rgba(43, 33, 24, 0.12);
+
+// Bootstrap variable overrides (must come before quarto/bootstrap import)
+$primary:     $canyon;
+$secondary:   $sage-dark;
+$body-bg:     $cream;
+$body-color:  $ink;
+$link-color:  $rust;
+$link-hover-color: $canyon;
+
+$font-family-sans-serif: "EB Garamond", Garamond, Georgia, serif;
+$font-family-serif:      "Cormorant Garamond", "EB Garamond", Garamond, Georgia, serif;
+$headings-font-family:   "Cormorant Garamond", "EB Garamond", Garamond, serif;
+$headings-font-weight:   700;
+
+$navbar-bg:    $canyon;
+$navbar-fg:    $cream;
+
+/*-- scss:rules --*/
+
+// Subtle sandy paper texture via layered gradients
+body {
+  background-color: $cream;
+  background-image:
+    radial-gradient(at 12% 8%,  rgba(217, 179, 130, 0.18) 0px, transparent 55%),
+    radial-gradient(at 88% 92%, rgba(160, 82, 45, 0.10) 0px, transparent 55%),
+    radial-gradient(at 50% 50%, rgba(122, 139, 111, 0.05) 0px, transparent 60%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Cormorant Garamond", "EB Garamond", Georgia, serif;
+  letter-spacing: 0.01em;
+  color: $canyon;
+}
+
+h1.title {
+  border-bottom: 2px solid $rust;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+// Drop-cap on first paragraph after title for that academic-broadside feel
+.quarto-title-block + section > p:first-child::first-letter,
+main > p:first-of-type::first-letter {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.4em;
+  float: left;
+  line-height: 0.9;
+  padding: 0.1em 0.1em 0 0;
+  color: $rust;
+  font-weight: 700;
+}
+
+// Navbar
+.navbar {
+  border-bottom: 3px double $sand;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+}
+
+// Equations
+.math.display {
+  background: rgba(217, 179, 130, 0.12);
+  border-left: 3px solid $rust;
+  padding: 0.6rem 1rem;
+  border-radius: 2px;
+  margin: 1rem 0;
+}
+
+// Code blocks — terracotta on cream
+pre.sourceCode, div.sourceCode {
+  background: #f5e8cf !important;
+  border: 1px solid $sandstone;
+  border-radius: 3px;
+}
+code:not(.sourceCode) {
+  background: rgba(160, 82, 45, 0.08);
+  color: $canyon;
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+
+// Blockquotes — like a marginalia note
+blockquote {
+  border-left: 3px solid $sage;
+  background: rgba(122, 139, 111, 0.08);
+  font-style: italic;
+  padding: 0.6rem 1rem;
+  color: $sage-dark;
+}
+
+// Figure captions
+figcaption, .figure-caption, .quarto-figure figcaption {
+  font-style: italic;
+  color: $sage-dark;
+  font-size: 0.92em;
+  text-align: center;
+}
+
+// Listing (posts page) cards
+.quarto-listing .quarto-post {
+  border-bottom: 1px solid $sandstone;
+  padding: 1rem 0;
+}
+.quarto-listing .quarto-post .listing-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  color: $canyon;
+}
+.quarto-listing .quarto-post .listing-categories .listing-category {
+  background: $sage;
+  color: $cream;
+  border-radius: 2px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+// Tables
+table {
+  font-variant-numeric: tabular-nums;
+}
+table thead {
+  border-bottom: 2px solid $canyon;
+  background: rgba(160, 82, 45, 0.06);
+}
+
+// Footer
+.page-footer {
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: $sage-dark;
+  border-top: 3px double $sandstone;
+}
+
+// Hero crest on landing page
+.institute-crest {
+  display: block;
+  margin: 1rem auto 2rem;
+  max-width: 180px;
+  filter: drop-shadow(0 2px 4px $shadow);
+}
+
+// Pull-quote class for fun
+.epigraph {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  text-align: center;
+  color: $sage-dark;
+  font-size: 1.15rem;
+  margin: 1.5rem auto;
+  max-width: 36em;
+}

@@ -1,0 +1,14 @@
+---
+title: "Notes & Preprints"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  feed: true
+  fields: [date, title, author, categories, description, reading-time]
+page-layout: full
+title-block-banner: false
+---

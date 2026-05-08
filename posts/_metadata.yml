@@ -1,0 +1,9 @@
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: false
+author:
+  - name: "Chuck Walla Institute"
+freeze: auto
+jupyter: python3
