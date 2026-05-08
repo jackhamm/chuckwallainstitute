@@ -1,0 +1,208 @@
+---
+title: "On the Apparent Passage of Time at Six Mile Spring"
+description: "A note, occasioned by a long evening, on the relativity of simultaneity, the Putnam–Rietdijk argument, and the block universe."
+author:
+  - name: "D. R. Caldera"
+    affiliation: "Chuck Walla Institute"
+date: "1983-09-21"
+date-format: "D MMMM YYYY"
+categories: [relativity, philosophy of physics, block universe]
+bibliography: ../../references.bib
+---
+
+## A small puzzle, restated
+
+It is by now an old observation, but one that bears repeating in the cool of
+an autumn evening, that the special theory of relativity does not contain a
+quantity we might fairly identify with the *passage* of time. Spacetime
+contains events. Events stand in invariant geometrical relations to one
+another. The sensation that some of these events are *now*, while others
+have receded into the *past* or wait in the *future*, finds no representation
+in the equations.
+
+This essay records, for the use of the Institute's library and any visiting
+scholar who may have arrived during a thunderstorm and now finds himself
+detained, the standard derivation of the conclusion most often associated
+with @putnam1967 and Rietdijk [-@rietdijk1966]: that two observers in
+relative motion necessarily disagree about which distant events are
+simultaneous with their own present, and that, on a natural reading, this
+disagreement leaves no room for an objective, world-wide *now*.
+
+## The relativity of simultaneity, briefly
+
+Consider two observers, $O$ and $O'$, in inertial motion relative to one
+another with velocity $v$ along the $x$-axis. The Lorentz transformation
+relates their coordinates by
+
+$$
+t' \;=\; \gamma\!\left(t - \frac{v x}{c^{2}}\right),
+\qquad
+x' \;=\; \gamma\!\left(x - v t\right),
+\qquad
+\gamma = \frac{1}{\sqrt{1 - v^{2}/c^{2}}}.
+$$ {#eq-lorentz}
+
+Two events at the same time $t$ in $O$'s frame, separated by spatial distance
+$\Delta x$, are *not* simultaneous in $O'$'s frame; rather, they are offset by
+
+$$
+\Delta t' \;=\; -\,\gamma\, \frac{v\,\Delta x}{c^{2}}.
+$$ {#eq-offset}
+
+The relation @eq-offset is the entire content of what we shall need.
+
+## A numerical illustration, from the porch
+
+Let $O$ be an observer seated, motionless, on the porch of the Institute at
+Six Mile Spring. Let $O'$ be the driver of an eastbound pickup truck on
+U.S. Route 95, headed toward Las Vegas at the legal limit of fifty-five
+miles per hour, or $v \approx 24.6\,\text{m/s}$. The distance from the Spring
+to the Las Vegas Strip is approximately $\Delta x = 90\,\text{km}$.
+
+The simultaneity offset @eq-offset evaluates, with the relevant numbers, to
+
+$$
+\Delta t' \;\approx\; -\,\frac{(24.6)(9.0 \times 10^{4})}{(3.0 \times 10^{8})^{2}}
+\;\approx\; -\,2.5 \times 10^{-11}\,\text{s},
+$$
+
+or twenty-five picoseconds. The driver's *now*, as it slices through the
+Strip, is offset by twenty-five picoseconds from the *now* of the porch.
+This is, by any reasonable standard, an unimpressive quantity. The point
+is not the magnitude.
+
+The point is that the offset is non-zero, and that it depends on the
+driver's velocity and on the direction in which she happens to be looking.
+Were she to make a U-turn, her plane of simultaneity would tilt the other
+way; were she to accelerate to a higher speed, it would tilt further. There
+is, in the geometry, no preferred slicing of spacetime into simultaneous
+events; there are only the slicings that particular observers happen to
+adopt.
+
+## The Andromeda generalization
+
+The argument is sometimes felt to acquire its force only when extended to
+larger distances. Following the original presentation: replace Las Vegas
+with the Andromeda galaxy, at a proper distance of $\Delta x \approx 2.5
+\times 10^{6}$ light-years, and replace the pickup truck with a leisurely
+walk in the direction of Andromeda at $v \approx 1\,\text{m/s}$. Then
+
+$$
+\Delta t' \;=\; -\,\frac{v\,\Delta x}{c^{2}}
+\;\approx\; -\,\frac{(1)(2.4 \times 10^{22})}{(3.0 \times 10^{8})^{2}}
+\;\approx\; -\,2.6 \times 10^{5}\,\text{s},
+$$
+
+which is *three days*. If one elects to walk toward Andromeda, the events
+on Andromeda which one regards as "happening now" are offset by three days
+relative to the events one regarded as "happening now" while standing
+still. A decision to take a step has, on this reading, an immediate
+consequence for what is *real* in a galaxy two and a half million light-years
+away. We do not propose to defend this construal; we simply observe that
+the geometry does not refuse it.
+
+## The picture
+
+The diagram below renders the situation at Six Mile Spring. The vertical
+axis is time, the horizontal axis is the distance toward Las Vegas. The
+solid black line is the porch's worldline; the slanted dashed line is the
+worldline of the eastbound truck. The two grey lines are the respective
+hyperplanes of simultaneity through the event labelled *Vegas, evening of
+21 September*. The relative tilt — exaggerated by a factor of $\sim 10^{6}$
+for visibility — is the geometrical content of the disagreement.
+
+```{python}
+#| label: fig-simultaneity
+#| fig-cap: "Two hyperplanes of simultaneity passing through a single event in Las Vegas. The tilt of the truck's plane has been exaggerated for legibility; in reality, twenty-five picoseconds is a very thin slice."
+#| fig-width: 7
+#| fig-height: 5
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+
+# Spatial extent (km), time extent (arbitrary units)
+x_max = 120
+t_max = 10
+
+# Worldlines
+# Porch: vertical at x = 0
+ax.plot([0, 0], [-t_max, t_max], color="#2b2118", lw=2, label="Porch worldline")
+# Truck: tilted (exaggerated tilt for visibility)
+truck_v = 0.35  # exaggerated
+ax.plot([-t_max*truck_v*10, t_max*truck_v*10],
+        [-t_max, t_max],
+        color="#a0522d", lw=2, ls="--", label="Truck worldline")
+
+# Las Vegas event
+vegas_x, vegas_t = 90, 0
+ax.plot(vegas_x, vegas_t, "o", color="#7a3b1f", markersize=9, zorder=5)
+ax.annotate("Las Vegas\n21 Sept., evening", xy=(vegas_x, vegas_t),
+            xytext=(vegas_x+3, vegas_t+0.7),
+            fontsize=10, fontstyle="italic", color="#2b2118")
+
+# Hyperplane of simultaneity for the porch (horizontal through Vegas event)
+ax.plot([-x_max*0.15, x_max], [vegas_t, vegas_t],
+        color="#7a8b6f", lw=1.4, alpha=0.9)
+ax.text(x_max*0.05, vegas_t+0.18, "porch's 'now'",
+        fontsize=9, color="#4f5e48", fontstyle="italic")
+
+# Hyperplane of simultaneity for the truck: tilted by ~v in our exaggerated units
+plane_slope = 0.025  # exaggerated
+xs = np.array([-x_max*0.15, x_max])
+ax.plot(xs, vegas_t + plane_slope*(xs - vegas_x),
+        color="#b8794f", lw=1.4, alpha=0.9, ls="-.")
+ax.text(x_max*0.05, vegas_t - 0.55, "truck's 'now'",
+        fontsize=9, color="#7a3b1f", fontstyle="italic")
+
+# Six Mile Spring marker
+ax.plot(0, 0, "s", color="#2b2118", markersize=8, zorder=5)
+ax.annotate("Six Mile Spring", xy=(0, 0), xytext=(-25, -1.2),
+            fontsize=10, fontstyle="italic", color="#2b2118")
+
+# Cosmetics
+ax.set_xlim(-30, x_max+5)
+ax.set_ylim(-t_max, t_max)
+ax.set_xlabel("distance east (km)")
+ax.set_ylabel("time (arb. units)")
+ax.axhline(0, color="#d9b382", lw=0.5, alpha=0.5)
+ax.axvline(0, color="#d9b382", lw=0.5, alpha=0.5)
+ax.grid(alpha=0.15)
+ax.legend(loc="lower right", framealpha=0.9, fontsize=9)
+ax.set_facecolor("#faf3e3")
+fig.patch.set_facecolor("#faf3e3")
+for spine in ax.spines.values():
+    spine.set_color("#7a3b1f")
+plt.tight_layout()
+plt.show()
+```
+
+## What follows, and what does not
+
+It would be excessive to claim that @eq-offset, by itself, decides the
+metaphysical question. The argument requires an additional premise — that
+*reality* is what is simultaneous with one's present — and this premise has
+been variously qualified, denied, or replaced (see, among others,
+@stein1968 and @savitt2000). The literature is patient and remains open.
+
+What @eq-offset *does* establish, conclusively, is that any view of time
+which insists on a single objective *now* sweeping forward through the
+universe must explain why two observers, identically constituted, in
+demonstrably symmetrical situations, disagree about its location. The
+block universe — the view that all events of spacetime are equally real,
+and that the apparent flow of time is a feature of a particular kind of
+embedded perceiver and not of the world — is, at the very least, the
+view that demands the fewest auxiliary assumptions.
+
+It has been remarked at the Institute, on more than one occasion, that
+the desert encourages the block-universe view. The night sky shows us the
+past; the rocks beneath show us a deeper past; the wind that has scoured
+them is, in the relevant geometrical sense, no less *there* than the
+boulder it is presently rounding. We have lived here long enough not to
+find this troubling.
+
+## References
+
+::: {#refs}
+:::

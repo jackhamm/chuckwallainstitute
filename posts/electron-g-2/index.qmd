@@ -4,7 +4,8 @@ description: "The leading anomalous magnetic moment of the electron, derived del
 author:
   - name: "A. Ocotillo"
     affiliation: "Chuck Walla Institute"
-date: "2026-03-14"
+date: "1979-11-04"
+date-format: "D MMMM YYYY"
 categories: [QED, anomalous moments, pedagogy]
 ---
 

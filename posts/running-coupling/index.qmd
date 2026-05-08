@@ -4,7 +4,8 @@ description: "One-loop $\\beta$-function, the Landau pole, and a plot of $\\alph
 author:
   - name: "M. Yucca"
     affiliation: "Chuck Walla Institute"
-date: "2026-04-22"
+date: "2014-06-12"
+date-format: "D MMMM YYYY"
 categories: [QED, renormalization, pedagogy]
 bibliography: ../../references.bib
 ---
