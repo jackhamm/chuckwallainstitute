@@ -13,13 +13,19 @@ moments, dimensional regularization.
 **A. Ocotillo** — *Fellow.* Lattice gauge theory; non-perturbative aspects
 of the Schwinger model.
 
-## Visiting Scholars (current term)
+## Visiting Scholars
 
 - **J. Saguaro** (Sonoran Polytechnic) — Resummation in soft-collinear
   effective theory.
-- **R. Cholla** (independent) — Casimir energies in non-trivial backgrounds.
+- **L. Bristlecone** — *Visiting Philosopher in Residence.* Foundations of
+  quantum mechanics; metaphysics of spacetime; the interpretation of
+  probability. In residence three or four times each year.
 
 ## Associates
 
-A small number of corresponding members contribute occasional notes
-and review preprints in their areas of expertise.
+- **R. Cholla** — Independent affiliate; Casimir energies in non-trivial
+  backgrounds.
+- **E. Mesquite** — Corresponding member; observational cosmology.
+
+A small number of further corresponding members contribute occasional
+notes and review preprints in their areas of expertise.

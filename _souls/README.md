@@ -23,3 +23,5 @@ what it reaches for, what it refuses to say — without ever being declared.
 | [ocotillo.md](ocotillo.md) | A. Ocotillo | Fellow (lattice, Schwinger model) |
 | [mesquite.md](mesquite.md) | E. Mesquite | Corresponding member (observational) |
 | [cholla.md](cholla.md) | R. Cholla | Independent affiliate (Casimir energies) |
+| [saguaro.md](saguaro.md) | J. Saguaro | Visiting from Sonoran Polytechnic (SCET) |
+| [bristlecone.md](bristlecone.md) | L. Bristlecone | Visiting Philosopher in Residence |
