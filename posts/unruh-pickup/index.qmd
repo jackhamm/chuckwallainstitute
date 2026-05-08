@@ -58,10 +58,10 @@ gravity of the Earth. The Unruh effect is, by any standard, small.
 ## The pickup truck
 
 The Institute maintains a 1986 Chevrolet K10, in which the Director's
-weekly run to Twentynine Palms is conducted. Empirical determination,
-made on the long straight section of Highway 62 east of the Indian
-Cove turnoff, places the vehicle's acceleration from rest to
-$60\,\text{mph}$ at approximately ten seconds, corresponding to
+weekly supply run to Pahrump is conducted. Empirical determination,
+made on the long straight section of Nevada State Route 160 east of the
+Last Chance Road junction, places the vehicle's acceleration from rest
+to $60\,\text{mph}$ at approximately ten seconds, corresponding to
 
 $$
 a_{\text{truck}} \;\approx\; \frac{60\,\text{mph}}{10\,\text{s}}

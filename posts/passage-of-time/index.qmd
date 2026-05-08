@@ -55,19 +55,21 @@ The relation @eq-offset is the entire content of what we shall need.
 
 Let $O$ be an observer seated, motionless, on the porch of the Institute at
 Six Mile Spring. Let $O'$ be the driver of an eastbound pickup truck on
-U.S. Route 95, headed toward Las Vegas at the legal limit of fifty-five
-miles per hour, or $v \approx 24.6\,\text{m/s}$. The distance from the Spring
-to the Las Vegas Strip is approximately $\Delta x = 90\,\text{km}$.
+Last Chance Road, who has just turned onto Nevada State Route 160 and is
+headed toward Las Vegas at the legal limit of fifty-five miles per hour, or
+$v \approx 24.6\,\text{m/s}$. The distance from the Spring to the Las Vegas
+Strip, by way of Pahrump and the Spring Mountains, is approximately
+$\Delta x = 110\,\text{km}$.
 
 The simultaneity offset @eq-offset evaluates, with the relevant numbers, to
 
 $$
-\Delta t' \;\approx\; -\,\frac{(24.6)(9.0 \times 10^{4})}{(3.0 \times 10^{8})^{2}}
-\;\approx\; -\,2.5 \times 10^{-11}\,\text{s},
+\Delta t' \;\approx\; -\,\frac{(24.6)(1.1 \times 10^{5})}{(3.0 \times 10^{8})^{2}}
+\;\approx\; -\,3.0 \times 10^{-11}\,\text{s},
 $$
 
-or twenty-five picoseconds. The driver's *now*, as it slices through the
-Strip, is offset by twenty-five picoseconds from the *now* of the porch.
+or thirty picoseconds. The driver's *now*, as it slices through the
+Strip, is offset by thirty picoseconds from the *now* of the porch.
 This is, by any reasonable standard, an unimpressive quantity. The point
 is not the magnitude.
 
@@ -113,7 +115,7 @@ for visibility — is the geometrical content of the disagreement.
 
 ```{python}
 #| label: fig-simultaneity
-#| fig-cap: "Two hyperplanes of simultaneity passing through a single event in Las Vegas. The tilt of the truck's plane has been exaggerated for legibility; in reality, twenty-five picoseconds is a very thin slice."
+#| fig-cap: "Two hyperplanes of simultaneity passing through a single event in Las Vegas. The tilt of the truck's plane has been exaggerated for legibility; in reality, thirty picoseconds is a very thin slice."
 #| fig-width: 7
 #| fig-height: 5
 
@@ -123,7 +125,7 @@ import matplotlib.pyplot as plt
 fig, ax = plt.subplots()
 
 # Spatial extent (km), time extent (arbitrary units)
-x_max = 120
+x_max = 140
 t_max = 10
 
 # Worldlines
@@ -136,7 +138,7 @@ ax.plot([-t_max*truck_v*10, t_max*truck_v*10],
         color="#a0522d", lw=2, ls="--", label="Truck worldline")
 
 # Las Vegas event
-vegas_x, vegas_t = 90, 0
+vegas_x, vegas_t = 110, 0
 ax.plot(vegas_x, vegas_t, "o", color="#7a3b1f", markersize=9, zorder=5)
 ax.annotate("Las Vegas\n21 Sept., evening", xy=(vegas_x, vegas_t),
             xytext=(vegas_x+3, vegas_t+0.7),

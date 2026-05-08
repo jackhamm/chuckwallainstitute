@@ -1,5 +1,5 @@
 ---
-title: "Olbers' Paradox at Three a.m. in Joshua Tree"
+title: "Olbers' Paradox at Three a.m. at Six Mile Spring"
 description: "On why the night sky is dark — even in the desert, where the case against the dark night sky is at its strongest."
 author:
   - name: "E. Mesquite"
@@ -13,10 +13,10 @@ bibliography: ../../references.bib
 ## A complaint, properly registered
 
 The author was lately persuaded to spend a clear August night on the
-basalt boulders north of the Institute, and reports that the sky
+limestone outcrops north of the Institute, and reports that the sky
 between three and four in the morning, with the moon below the horizon
-and Yucca Valley sleeping, contained more stars than he had previously
-believed possible. He further reports — and this is the substance of
+and Pahrump sleeping fourteen kilometers to the east, contained more
+stars than he had previously believed possible. He further reports — and this is the substance of
 the present note — that the spaces *between* the stars were nevertheless
 black.
 
@@ -51,7 +51,7 @@ The night sky should be infinitely bright. Even granting that nearer
 stars eventually occlude more distant ones, a thermodynamic
 re-derivation due to @harrison1987 shows that in steady state the sky
 must reach the surface temperature of the average star — some thousands
-of kelvin. This is unambiguously not what one observes from Joshua Tree.
+of kelvin. This is unambiguously not what one observes from Last Chance Road.
 
 ## The resolutions, in order of importance
 
@@ -127,7 +127,7 @@ The plateau in the rust-colored curve is the resolution of the paradox.
 A finite-age, expanding universe deposits a *finite* photon density on
 the night sky.
 
-## What one actually sees from the Mojave
+## What one actually sees from Last Chance Road
 
 The integrated extragalactic background, once we account for the
 factors above, is approximately $10\,\text{nW/m}^{2}/\text{sr}$ — a
