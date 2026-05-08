@@ -1,0 +1,162 @@
+---
+title: "Zodiacal Light from Last Chance Road"
+description: "On the cone of light that precedes the desert dawn, on the dust that scatters it, and on what one is in fact looking at."
+author:
+  - name: "E. Mesquite"
+    affiliation: "Corresponding member, Chuck Walla Institute"
+date: "1992-03-08"
+date-format: "D MMMM YYYY"
+categories: [observational, solar system, cosmology]
+bibliography: ../../references.bib
+---
+
+## A pyramid before sunrise
+
+There is a particular hour in late winter, about ninety minutes before
+sunrise, when the eastern sky over the Spring Mountains contains a
+pale luminous cone, broad at the horizon, narrowing to a point some
+forty degrees above. The cone is not centered on the place where the
+sun will rise. It is centered on the *ecliptic*, which on a March
+morning meets the horizon at an angle of nearly seventy degrees, and
+the cone follows that line. It is brighter than the Milky Way. From
+a sufficiently dark site — and the dirt section of Last Chance Road,
+two miles south of the Institute, is sufficiently dark — it is, on a
+clear moonless morning, quite hard to overlook.
+
+The phenomenon is the *zodiacal light*. It is, in plain terms,
+sunlight scattered by the cloud of interplanetary dust which lies in
+the plane of the solar system. The dust is mostly cometary, with a
+contribution from the slow grinding of asteroids; the grains are tens
+of microns in size, and there are several billion tonnes of them
+distributed across a region extending well past the orbit of Mars
+[@leinert1998]. The total mass is small — comparable to that of a
+single mid-sized asteroid — but spread over so vast a volume that the
+column density along the ecliptic is sufficient to produce a visible
+glow.
+
+## What the eye is doing
+
+The eye, at this hour, is performing a long and difficult act of
+integration. It is collecting photons from the sun — most of them
+from a region between perhaps $0.1$ and $5$ astronomical units — that
+have been redirected by single scattering off the surfaces of dust
+grains and that arrive at the dark-adapted observer at intensities
+between perhaps $30$ and $300\,S_{10}$ units, where one $S_{10}$ is
+the surface brightness of one tenth-magnitude star per square degree.
+The total integrated brightness of the zodiacal light, summed over
+the sky, is comparable to that of all the unresolved stars in the
+Milky Way put together [@reach1996].
+
+The intensity, as a function of ecliptic latitude $\beta$ and
+elongation $\epsilon$ from the sun, is well-fit at small ecliptic
+latitudes by an empirical relation of the form
+
+$$
+I(\beta, \epsilon) \;\propto\; \epsilon^{-2.3}\;
+\bigl(1 + (\beta/\beta_{0})^{2}\bigr)^{-3/2},
+$$ {#eq-zodiacal-fit}
+
+with $\beta_{0} \approx 30^{\circ}$, applicable in the range
+$\epsilon \gtrsim 30^{\circ}$ where the inner-zodiacal physics is not
+the dominant contribution [@leinert1998]. The form @eq-zodiacal-fit
+encodes two facts: that the dust is concentrated near the ecliptic
+plane, and that the column density falls off with distance from the
+sun roughly as $1/r$.
+
+```{python}
+#| label: fig-zodiacal-profile
+#| fig-cap: "Surface brightness of the zodiacal light as a function of ecliptic latitude, at fixed solar elongation $\\epsilon = 90^{\\circ}$. The cone observed near the horizon is the integral of this profile along the line of sight, taken near the antisolar point of the morning sky."
+#| fig-width: 6.8
+#| fig-height: 4
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+beta = np.linspace(-90, 90, 600)
+beta0 = 30.0
+I = (1 + (beta/beta0)**2)**(-1.5)
+I_full = 220 * I  # in S_10 units, schematic normalization at ecliptic
+
+fig, ax = plt.subplots()
+ax.plot(beta, I_full, color="#a0522d", lw=2.0)
+ax.fill_between(beta, 0, I_full, color="#d9b382", alpha=0.35)
+
+# Ecliptic and pole markers
+ax.axvline(0, color="#7a3b1f", lw=0.8, ls=":", alpha=0.7)
+ax.text(2, 230, "ecliptic", color="#7a3b1f", fontsize=9, fontstyle="italic")
+ax.axvline(90, color="#7a8b6f", lw=0.8, ls=":", alpha=0.6)
+ax.axvline(-90, color="#7a8b6f", lw=0.8, ls=":", alpha=0.6)
+ax.text(78, 60, "ecliptic\npole", color="#4f5e48", fontsize=8.5, fontstyle="italic")
+
+ax.set_xlabel(r"ecliptic latitude  $\beta$  (degrees)")
+ax.set_ylabel(r"surface brightness  ($S_{10}$ units)")
+ax.set_xlim(-90, 90)
+ax.set_ylim(0, 280)
+ax.grid(alpha=0.2)
+ax.set_facecolor("#faf3e3")
+fig.patch.set_facecolor("#faf3e3")
+for spine in ax.spines.values():
+    spine.set_color("#7a3b1f")
+plt.tight_layout()
+plt.show()
+```
+
+The slow falloff with $\beta$ is what gives the cone its considerable
+breadth at the horizon. Were the dust confined to a thin disk, the
+zodiacal light would be a narrow ribbon; instead, it is a pyramid.
+
+## The morning in question
+
+The morning these notes record was the eighth of March, 1992. The
+moon had set at half past one. The sky was clear in the way that
+desert skies are clear after a windy day, with the dust settled and
+the air dry. I drove south on Last Chance Road, parked where the
+washboard becomes uncomfortable, and waited on the hood with a thermos
+and an old Brunton compass.
+
+The cone came up at about a quarter past five. It was visible to the
+naked eye for perhaps forty minutes before astronomical twilight
+began to wash it out. Below the cone, just at the horizon, I caught
+once or twice the brighter inner *gegenschein* — the diffuse
+backscattering from dust at the antisolar point, an entirely separate
+phenomenon and the harder one to see — though the geometry was wrong
+for a clean detection.
+
+A pair of bats, as is usual at that hour, came past low and turned
+inland.
+
+## What is being measured
+
+The zodiacal light is not, in cosmological terms, important. The
+extragalactic background, which I have written about elsewhere
+[@mesquite1988], is fainter by orders of magnitude. The scientific
+interest of the zodiacal light is principally that it is a *foreground*:
+to measure the diffuse extragalactic background light from any
+satellite mission whose orbit crosses the ecliptic plane — which is
+most of them — one must subtract the zodiacal contribution to better
+than a percent. The DIRBE instrument aboard *COBE* did this work
+patiently between 1989 and 1990 [@hauser1998], and the careful
+zodiacal model [@kelsall1998] that resulted is, in some quiet sense,
+the price one pays for having seen anything at all of the sky beyond.
+
+But the cone, observed from the desert, is not a foreground to anyone
+in particular. It is what a few billion tonnes of cometary debris
+look like in the right light. The grains, individually, are smaller
+than one can see; the cloud, integrated, is the second-brightest
+diffuse object in the inner solar system. We who live where the air
+is dark are the people who get to see it.
+
+## A small closing note
+
+A naked eye can register the zodiacal light from perhaps three
+hundred sites in the lower forty-eight states. Last Chance Road is
+one of them. I would urge the visitor — particularly the visitor
+arriving in autumn, when the morning ecliptic stands steepest — to
+rise an hour earlier than is comfortable, walk south of the
+Institute, and look east. The pyramid is patient. It will wait for
+the eye to adapt.
+
+## References
+
+::: {#refs}
+:::

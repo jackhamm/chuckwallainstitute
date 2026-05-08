@@ -1,0 +1,205 @@
+---
+title: "The Wheeler–DeWitt Equation and the Disappearance of $t$"
+description: "On a fundamental equation that contains no time, on the Page–Wootters proposal that time emerges from correlation, and on what one keeps clocks for."
+author:
+  - name: "D. R. Caldera"
+    affiliation: "Chuck Walla Institute"
+date: "1986-09-30"
+date-format: "D MMMM YYYY"
+categories: [quantum gravity, foundations, problem of time]
+bibliography: ../../references.bib
+---
+
+## A small admission
+
+It has been remarked at the Institute, by the visitor who first noticed
+it, that since 1981 we have kept two clocks. One is the brass railroad
+clock that hangs in the seminar room; the other is a plain electric
+clock, mounted in the kitchen, which keeps better time. The remark is
+fairer than it sounds. The two clocks do not, strictly speaking, agree
+— the brass one runs slow by perhaps a minute a week, the electric one
+gains a few seconds a month — and the question of which is *correct*
+has been politely deferred for the better part of five years. The
+present note is, in some loose sense, the answer.
+
+The relevant physics begins, as it often does, with an embarrassment.
+The canonical quantization of general relativity, set out by
+@dewitt1967 and @wheeler1968 and pursued in various forms by their
+successors, produces a wave functional $\Psi[g_{ij}]$ on the space of
+three-geometries, satisfying the constraint
+
+$$
+\hat{H}\,\Psi[g_{ij}] \;=\; 0.
+$$ {#eq-wdw}
+
+The equation is called the Wheeler–DeWitt equation. It is presumably
+the equation governing the quantum state of the universe, and it has
+the disconcerting property of containing no time variable.
+
+## What is missing, and why
+
+In ordinary quantum mechanics the Schrödinger equation has the form
+
+$$
+i\hbar\, \frac{\partial \Psi}{\partial t} \;=\; \hat{H}\, \Psi,
+$$ {#eq-schrodinger}
+
+and the parameter $t$ is, however unscrutinized, *there*. It is the
+parameter against which the state evolves. The wavefunction at $t = 0$
+is something; the wavefunction at $t = 1\,\text{s}$ is something
+related; the relation is provided by @eq-schrodinger, which presupposes
+that there is a $t$ to differentiate with respect to.
+
+In @eq-wdw there is no such parameter. This is not a notational
+omission. The reasoning that produces @eq-wdw — diffeomorphism
+invariance of the underlying gravitational theory — *requires* that
+no preferred time function appear. The universe, at its most
+fundamental level, does not evolve. It simply *is*, in some
+configuration that satisfies the constraint.
+
+This is the *problem of time*, as canvassed at length by @kuchar1991
+and @isham1992. The literature is large and the resolutions are
+many; none has won general assent.
+
+## The Page–Wootters proposal
+
+The proposal due to @page1983, called by them *evolution without
+evolution*, is the one that has lodged most firmly in my own
+thinking. Their argument may be put as follows.
+
+Consider a closed quantum system — a universe — composed of two
+subsystems, which we shall call $A$ and $B$. Suppose the joint state
+$|\Psi\rangle_{AB}$ satisfies the timeless constraint
+
+$$
+\bigl(\hat H_A + \hat H_B\bigr) |\Psi\rangle_{AB} \;=\; 0.
+$$ {#eq-constraint}
+
+There is, by hypothesis, no external time. Now suppose that the state
+is *correlated* in the following sense: the subsystem $B$ is what we
+shall call a *clock*, meaning that its Hamiltonian has a self-adjoint
+canonical conjugate $\hat T_B$ — a position-like operator with a
+continuous spectrum. Then the conditional state of $A$, given that
+the clock $B$ has been observed to read the value $t$, is
+
+$$
+|\psi_A(t)\rangle \;\equiv\; \frac{\langle t |_B\, |\Psi\rangle_{AB}}
+{\bigl\| \langle t |_B\, |\Psi\rangle_{AB} \bigr\|}.
+$$ {#eq-conditional}
+
+A short calculation, using @eq-constraint, shows that this conditional
+state satisfies
+
+$$
+i\hbar\, \frac{\partial}{\partial t}\, |\psi_A(t)\rangle
+\;=\; \hat H_A\, |\psi_A(t)\rangle.
+$$ {#eq-emergent}
+
+That is: the timeless state, conditioned on the clock's reading,
+*looks* to subsystem $A$ exactly like the standard time-evolved
+quantum state of @eq-schrodinger. The parameter $t$ which appeared
+to be missing has reappeared, not as a fundamental variable, but as
+the *value of one subsystem's reading correlated with the state of
+another*.
+
+## A picture of two clocks
+
+```{python}
+#| label: fig-two-clocks
+#| fig-cap: "Two clocks, in a closed universe with no external time. The joint state is stationary; the apparent dynamics of clock A — its hand sweeping from one position to the next — is what an internal observer reports when she conditions on the reading of clock B. Time is what one of these clocks records about the other."
+#| fig-width: 7
+#| fig-height: 4
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, axes = plt.subplots(1, 3, figsize=(7.6, 2.8))
+
+# A series of three "snapshots" — each conditioned on a different reading of clock B
+ts = [0.0, 1.2, 2.4]
+for ax, t in zip(axes, ts):
+    # Clock A: hand at angle proportional to t
+    theta_A = -np.pi/2 + 1.3 * t
+    ax.add_patch(plt.Circle((0, 0), 1.0, fill=False, color="#7a3b1f", lw=1.6))
+    ax.plot([0, 0.7*np.cos(theta_A)], [0, 0.7*np.sin(theta_A)],
+            color="#a0522d", lw=2.2)
+    # Clock B's reading shown below as a dial reading
+    ax.text(0, -1.6, f"clock $B$ reads $t = {t:.1f}$",
+            ha="center", fontsize=10, color="#2b2118", fontstyle="italic")
+    ax.text(0, 1.25, "clock $A$", ha="center", fontsize=10,
+            color="#7a3b1f", fontstyle="italic")
+    # Hour ticks
+    for k in range(12):
+        a = 2*np.pi * k / 12
+        ax.plot([0.92*np.cos(a), 1.0*np.cos(a)],
+                [0.92*np.sin(a), 1.0*np.sin(a)],
+                color="#7a3b1f", lw=0.9)
+    ax.set_xlim(-1.4, 1.4)
+    ax.set_ylim(-2.0, 1.5)
+    ax.set_aspect("equal")
+    ax.axis("off")
+    ax.set_facecolor("#faf3e3")
+
+fig.patch.set_facecolor("#faf3e3")
+fig.suptitle(r"$|\psi_A(t)\rangle \ = \ \langle t|_B\,|\Psi\rangle_{AB}$",
+             fontsize=11, color="#2b2118", y=0.04)
+plt.tight_layout()
+plt.show()
+```
+
+The figure shows what the proposal asks one to imagine. There is no
+animation in the underlying state — $|\Psi\rangle_{AB}$ is, by
+@eq-constraint, an eigenstate of zero energy and does not change. The
+*appearance* of a moving hand on clock $A$ is recovered when we look
+at the conditional state given each successive reading of clock $B$.
+What looks like time is a property of the correlation between the
+two subsystems.
+
+It is, I think, a quietly remarkable proposal. It does not solve the
+problem of time in the sense that any cosmologist would call solved;
+the construction is technically delicate, the decomposition of the
+universe into "clock" and "rest" is not unique, and the recovery of
+the standard semiclassical limit involves choices that the literature
+has not finished arguing over. But it does suggest that the
+*disappearance* of $t$ from the fundamental equation is not a defect
+of the theory. Time is a relation, not a substance; the equation
+omits it as one might omit, from a description of a marriage, the
+exterior weather.
+
+## What the two clocks at the Institute have been doing
+
+The brass clock in the seminar room and the electric clock in the
+kitchen do not, of course, satisfy a Wheeler–DeWitt constraint. Their
+correlations are mediated by a Hamiltonian that contains, among other
+things, the local power grid and the temperature of the brass case.
+But the *structure* of the situation is not different from the
+cosmological case in any deep way. Each clock measures the other.
+What we call *time*, when we glance at one and then at the other and
+say "the brass one is slow," is a fact about how their readings are
+correlated. It is not a fact about a separately existing parameter
+which both are imperfectly tracking.
+
+I have, since 1981, found this thought consoling. The clocks need not
+agree to keep good time. They need only keep correlated time. The
+difference matters principally to the physicist; for the rest of the
+Institute, breakfast occurs when the kitchen clock says it does, and
+the seminar begins, more or less, when the brass clock chimes.
+
+## A closing observation
+
+The chuckwalla, *Sauromalus ater*, does not keep time. He notices the
+sun, and the temperature of the rocks, and the relative positions of
+the morning shadows; from these he assembles a record adequate to his
+needs. We are, in the relevant sense, doing the same. We have more
+clocks, and the corrections are more careful, and we sometimes write
+papers about the corrections; but the underlying activity is the
+old one, of inferring the state of one part of the world from the
+reading of another.
+
+The brass clock has just struck, and although it is slow by perhaps
+a minute, the kitchen agrees that it is time to put the kettle on.
+
+## References
+
+::: {#refs}
+:::
