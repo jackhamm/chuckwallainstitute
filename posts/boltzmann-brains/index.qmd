@@ -1,0 +1,214 @@
+---
+title: "Eternal Inflation, Boltzmann Brains, and the Difficulty of Trusting One's Own Conclusions"
+description: "On a cosmological measure problem, on the proposition that one is more likely a fluctuation than a person, and on what one is to do about an argument that would undermine its own premises."
+author:
+  - name: "D. R. Caldera"
+    affiliation: "Chuck Walla Institute"
+date: "2007-12-29"
+date-format: "D MMMM YYYY"
+categories: [cosmology, foundations, philosophy of physics]
+bibliography: ../../references.bib
+---
+
+## A small problem, of the sort one mulls over in winter
+
+It is not, as a rule, the Institute's habit to write on the cosmological
+literature. The matter is large, the measurements are sparse, and the
+arguments tend to flower in directions for which the desert provides no
+particular advantage. The present note is an exception, occasioned by a
+long evening, a settled stove, and the slow accumulation of papers on a
+question which has been called — variously, and not always charitably —
+the problem of *Boltzmann brains*.
+
+The proposition, in its simplest form, is this. If the universe is
+eternally inflating in the sense of @linde1986, so that new Hubble
+volumes are continually generated and the global spacetime persists
+without end, then the great majority of observers in the resulting
+ensemble are not the products of cosmological structure formation, of
+stars and chemistry and a long evolutionary history, but are instead
+*thermal fluctuations* — brief, accidental, nearly-but-not-quite
+randomly assembled patterns of matter, of just sufficient organization
+to constitute, for an instant, an observer. The argument was made
+forcefully by @dyson2002 and has been worried over since.
+
+If the proposition is true, the reader is, with overwhelming probability,
+one of these fluctuations.
+
+## Why one might believe such a thing
+
+The reasoning, set out plainly, has three parts.
+
+*First*, an eternal de Sitter spacetime — which our universe appears
+asymptotically to be approaching — has a finite temperature
+$T_{\text{dS}} = H/2\pi$ and a finite entropy $S_{\text{dS}} = \pi/(H^{2}
+\ell_{P}^{2})$. For our values of $H_{0}$ this entropy is approximately
+$10^{122}$ in units of Boltzmann's constant. That is large, but it is
+not infinite. The system has a finite phase space. It will, given
+enough time, *recur* [@dyson2002].
+
+*Second*, in any finite-entropy thermal system, fluctuations of any
+specified configuration occur with a probability suppressed roughly by
+
+$$
+P \;\sim\; \exp\!\left[-\Delta S / k_{B}\right],
+$$ {#eq-fluctuation}
+
+where $\Delta S$ is the entropy reduction required to assemble the
+configuration. For a fluctuation to a configuration as orderly as a
+human brain — say $\Delta S \sim 10^{42}$ — the suppression is severe;
+but the time available is, in eternal de Sitter, longer still. The
+expected wait time for a single such fluctuation is on the order of
+$\exp(10^{42})$ Hubble times.
+
+*Third*, the great cosmological epochs in which ordered observers like
+ourselves can be produced — periods of structure formation, the long
+afternoon of stelliferous chemistry — are by comparison brief. The
+universe's record of having produced complex observers by the *honest*
+route is a few tens of billions of years. The record of producing
+observers by *fluctuation* is, on the standard accounting, very nearly
+forever.
+
+The ratio is unflattering.
+
+## A picture of the timescales
+
+The plot below sets the relevant durations on a logarithmic axis. The
+human-scale events occupy a thin strip near the left margin; the
+fluctuation timescales occupy the unmarked remainder of the page.
+
+```{python}
+#| label: fig-timescales
+#| fig-cap: "A logarithmic accounting of cosmological durations, in seconds. The age of the universe and the lifetime of the longest-lived stars are visible only because the axis has been compressed; the Boltzmann-brain and de Sitter recurrence timescales are placed at their order of magnitude in the exponent. The plot is, in a precise sense, mostly empty."
+#| fig-width: 8
+#| fig-height: 3.6
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Each entry: (label, log10(seconds), color)
+events = [
+    ("Planck time",                          -44, "#7a8b6f"),
+    ("1 second",                                0, "#7a8b6f"),
+    ("age of universe",                        17.5, "#2b2118"),
+    ("end of stelliferous era",               21,  "#7a3b1f"),
+    ("proton decay (if)",                     41,  "#7a8b6f"),
+    ("solar-mass BH evaporation",             67,  "#7a8b6f"),
+    ("Boltzmann brain (typical wait)",        42,  "#a0522d"),
+    ("de Sitter Poincaré recurrence",        122,  "#a0522d"),
+]
+
+fig, ax = plt.subplots()
+
+# Background gradient suggesting the scale of empty axis
+ax.axvspan(-50, 130, color="#faf3e3", zorder=0)
+
+for label, x, color in events:
+    ax.plot([x, x], [0, 1], color=color, lw=1.2, alpha=0.85)
+    rotation = 45
+    yoff = 1.05
+    if "Boltzmann" in label or "Poincaré" in label:
+        rotation = 30
+    ax.text(x, yoff, label, rotation=rotation,
+            fontsize=9, ha="left", va="bottom",
+            color=color, fontstyle="italic")
+
+# A reference: where a human life sits
+ax.plot([9.4, 9.4], [0, 1], color="#4f5e48", lw=2.5, alpha=0.9)
+ax.text(9.4, -0.18, "a human life", fontsize=8.5,
+        color="#4f5e48", ha="center", fontstyle="italic")
+
+ax.set_xlim(-50, 130)
+ax.set_ylim(-0.5, 4.2)
+ax.set_yticks([])
+ax.set_xlabel(r"$\log_{10}$ (seconds)")
+ax.spines["left"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.spines["top"].set_visible(False)
+ax.spines["bottom"].set_color("#7a3b1f")
+ax.tick_params(axis="x", colors="#2b2118")
+ax.set_facecolor("#faf3e3")
+fig.patch.set_facecolor("#faf3e3")
+
+# Note: the BB and Poincaré markers are placed at log10(log10) of the
+# actual exponent — i.e., at the order of magnitude of the exponent,
+# not at the literal value, which would be unrepresentable on any
+# physically achievable plot.
+ax.annotate("(values shown are the\norder of magnitude of\nthe exponent)",
+            xy=(85, 3.0), fontsize=8, color="#7a3b1f", fontstyle="italic",
+            ha="left")
+
+plt.tight_layout()
+plt.show()
+```
+
+The plot is, as the caption notes, somewhat dishonest: the Boltzmann-brain
+and Poincaré-recurrence ticks are placed at the *order of magnitude of
+the exponent* of the actual timescale, because the timescale itself is
+not representable on any axis we could draw. If we drew the recurrence
+time honestly, the universe's age would not appear at all.
+
+## The objection that interests me
+
+The numerical case is striking, and there are several ways one might
+respond to it. One could argue that the measure on the eternally
+inflating ensemble is the wrong measure (@bousso2007); one could argue
+that the de Sitter phase is not eternal because some other instability
+intervenes (@dyson2002); one could argue that the calculation of
+$\Delta S$ for an observer is wrong by many orders of magnitude
+(@page2008). All of these are plausible. The Institute holds no view.
+
+What interests me, sitting here, is a different kind of objection,
+which has been pressed in various forms by @albrecht2004 and
+@hartle2007, and which I shall paraphrase. *If* the
+cosmological model implies that I am very probably a Boltzmann brain,
+then the *evidence* I have for the cosmological model — my memories of
+graduate school, of Caltech, of the texts on the shelf behind me — is
+itself very probably the product of a momentary fluctuation, and is
+therefore evidence of nothing in particular. The argument has eaten
+its own premise. A cosmology in which I am most likely a Boltzmann
+brain is a cosmology in which I have no good reason to believe the
+cosmology.
+
+This is what is meant, in the literature, by *cognitive instability*.
+A theory that predicts the unreliability of its own evidence cannot
+be coherently held.
+
+The objection is, I think, decisive — though not in the way it is
+sometimes presented. It does not refute the cosmology in the sense of
+showing it false. It refutes the cosmology in the older and gentler
+sense of showing it *unreasonable to assert*. We are entitled to
+believe theories on the basis of the evidence available to us; we are
+entitled to *act* on that belief; and a theory that, accepted, denies
+us that entitlement has, in the moment of acceptance, declined to be
+a theory we can live by. One does not need to refute it. One sets it
+aside and goes on.
+
+## What one does, then
+
+There remains the practical question of what to *do* with the
+proposition that one's evidence may not be evidence. The reader, like
+the author, has presumably resolved this question by waking up in the
+morning and continuing to behave as though his recollections were
+trustworthy. This is the right resolution. The cosmology, if it is a
+problem, is a problem for cosmology; it is not a problem one carries
+out to feed the dogs.
+
+I find the matter sits more easily out here than it did when I was
+younger and lived nearer to a city. The stones at the edge of the
+property have been in approximately their present configuration for
+several million years. The wind has scoured them; the seep below the
+windmill has watered them; a particular juniper, of disreputable
+shape, has grown beside one of them within recorded memory. None of
+these things are fluctuations in any reasonable sense. They are facts
+about the world, slow and durable, and they will not be rescinded by
+a measure-theoretic argument concocted in a warm room.
+
+The dogs, at the moment, are on the porch. The stove is doing its
+work. I have set down my glass to finish this paragraph, and I shall
+pick it up again. If I am wrong about all of this, I shall not, in
+the relevant sense, ever know.
+
+## References
+
+::: {#refs}
+:::
