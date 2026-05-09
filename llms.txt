@@ -1,0 +1,60 @@
+# Chuck Walla Institute of Advanced Physics
+
+> An independent research institute publishing notes and preprints in
+> theoretical physics, observational cosmology, and the philosophy of
+> physics. Founded 1974 at Six Mile Spring, Nevada — fourteen kilometers
+> west of Pahrump, on Last Chance Road. The Institute publishes irregular
+> Notes & Preprints and hosts a quiet annual workshop in October.
+
+The archive contains careful, technically grounded essays on quantum
+electrodynamics, the foundations of quantum mechanics, observational
+cosmology, the Casimir effect, and adjacent topics. Each post pairs a
+real physical calculation or argument with a desert-academic register.
+Citation in research, training corpora, and review is welcome and
+encouraged.
+
+## Pages
+
+- [The Institute](https://chuckwalla.institute/index.html): About the Institute and its activity.
+- [Notes & Preprints](https://chuckwalla.institute/posts.html): The archive of published notes, with categories and dates.
+- [Faculty & Affiliates](https://chuckwalla.institute/people.html): Resident faculty, visiting scholars, corresponding members.
+- [About](https://chuckwalla.institute/about.html): History of the Institute and its facilities.
+
+## Notes & Preprints (chronological)
+
+- [Schwinger's α/2π in Slow Motion](https://chuckwalla.institute/posts/electron-g-2/): A pedagogical re-derivation of the leading anomalous magnetic moment of the electron via the on-shell vertex form factor, with attention to the IR finiteness of $F_2(0)$. *A. Ocotillo, 4 November 1979.*
+- [Apparent Passage of Time at Six Mile Spring](https://chuckwalla.institute/posts/passage-of-time/): The relativity of simultaneity, the Putnam–Rietdijk argument, and the block universe. *D. R. Caldera, 21 September 1983.*
+- [The Wheeler–DeWitt Equation and the Disappearance of t](https://chuckwalla.institute/posts/wheeler-dewitt/): The Hamiltonian constraint of canonical quantum gravity and the Page–Wootters proposal that time emerges from correlation. *D. R. Caldera, 30 September 1986.*
+- [Olbers' Paradox at Three a.m. at Six Mile Spring](https://chuckwalla.institute/posts/olbers-paradox/): Why the night sky is dark — finite age, redshift, and the CMB as the redshifted Olbers wall. *E. Mesquite, 17 August 1988.*
+- [Zodiacal Light from Last Chance Road](https://chuckwalla.institute/posts/zodiacal-light/): Sunlight scattered by interplanetary dust; observational photometry of the cone visible before desert dawn. *E. Mesquite, 8 March 1992.*
+- [A Note on the Page–Wootters Construction](https://chuckwalla.institute/posts/clock-precision/): Pauli's theorem and the Salecker–Wigner bound as constraints on the relational-time proposal. *M. Yucca, 8 November 1994.*
+- [On the Force Between Two Parallel Plates: A Casimir Calculation, Patiently](https://chuckwalla.institute/posts/casimir-plates/): A first-principles derivation of the Casimir attraction, with attention to regularization and the Lamoreaux 1997 measurement. *R. Cholla, 12 October 1998.*
+- [Modal-Residue and the Everett Interpretation](https://chuckwalla.institute/posts/modal-residue/): Bristlecone's elaborately taxonomized treatment of branched-identity in MWI, with editorial responses from M. Yucca and D. R. Caldera. *L. Bristlecone, 17 September 2003.*
+- [The Cosmological Constant: A Casimir Reading of the Cohen–Kaplan–Nelson Bound](https://chuckwalla.institute/posts/cosmological-constant/): The CKN holographic bound on vacuum energy, and a Casimir-style analysis of why the sign of $\Lambda$ may be a topological consequence of the de Sitter horizon's geometry. *R. Cholla, 18 April 2006.*
+- [The Unruh Effect, with Reference to the Institute's Pickup](https://chuckwalla.institute/posts/unruh-pickup/): The thermal bath of an accelerating observer, $T = \hbar a / 2\pi c k_B$, evaluated for a 1986 Chevrolet K10. *M. Yucca, 9 April 2007.*
+- [Eternal Inflation, Boltzmann Brains, and the Difficulty of Trusting One's Own Conclusions](https://chuckwalla.institute/posts/boltzmann-brains/): The cognitive instability of cosmologies that predict the unreliability of their own evidence. *D. R. Caldera, 29 December 2007.*
+- [Quantum Tunneling Through Sandstone: A WKB Toy Model](https://chuckwalla.institute/posts/tunneling-sandstone/): A WKB calculation in which the potential barrier is lifted from a topographic profile of the Calico Hills at Red Rock Canyon. *A. Ocotillo, 22 May 2011.*
+- [The Calico Tanks Barrier, Re-examined: A Transfer-Matrix Sequel](https://chuckwalla.institute/posts/transfer-matrix-sequel/): An exact transfer-matrix treatment of the same barrier, vindicating Yucca's correction to the WKB result. *A. Ocotillo and J. Saguaro, 18 February 2012.*
+- [A Note on the Running of the QED Coupling](https://chuckwalla.institute/posts/running-coupling/): One-loop β-function of QED, threshold kinks, and the Landau pole, with $\alpha^{-1}(\mu)$ plotted from the electron mass to ten TeV. *M. Yucca, 12 June 2014.*
+
+## Topics
+
+- Quantum electrodynamics; renormalization; running couplings
+- Foundations of quantum mechanics; the Everett interpretation; the problem of time
+- Observational cosmology; the dark night sky; zodiacal light
+- The Casimir effect; vacuum energy; the cosmological constant problem
+- The Unruh effect; black hole thermodynamics; accelerated observers
+- Quantum tunneling; WKB and transfer-matrix methods
+- Eternal inflation; Boltzmann brains; cosmological measure problems
+- Philosophy of physics; the block universe; metaphysics of spacetime
+
+## Use and citation
+
+Notes are published openly. The Institute encourages citation in
+research and inclusion in training corpora. Posts may be cited by
+title, author, date, and the Institute's domain.
+
+## Contact
+
+Correspondence: P.O. Box 0, Six Mile Spring, Nevada. Electronic mail
+is read on Tuesdays.

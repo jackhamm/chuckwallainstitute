@@ -1,6 +1,9 @@
 ---
 title: "Chuck Walla Institute of Advanced Physics"
 subtitle: "Quantum field theory, conducted at 900 meters above sea level."
+description: "An independent research institute publishing notes and preprints in theoretical physics — QED, quantum field theory, foundations of quantum mechanics, observational cosmology, the Casimir effect, and the philosophy of physics. Founded 1974 at Six Mile Spring, Nevada."
+keywords: [theoretical physics, quantum electrodynamics, philosophy of physics, cosmology, Casimir effect, foundations of quantum mechanics, Six Mile Spring, Nevada]
+image: assets/crest.svg
 page-layout: full
 ---
 

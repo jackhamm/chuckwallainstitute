@@ -3,11 +3,22 @@ project:
   output-dir: _site
   resources:
     - CNAME
+    - robots.txt
+    - llms.txt
 
 website:
   title: "Chuck Walla Institute of Advanced Physics"
-  description: "An independent research institute studying quantum field theory and time in the high desert."
+  description: "An independent research institute publishing notes and preprints in theoretical physics — quantum electrodynamics, foundations of quantum mechanics, observational cosmology, the Casimir effect, and the philosophy of physics. Founded 1974 at Six Mile Spring, Nevada."
   site-url: https://chuckwalla.institute
+  favicon: assets/crest.svg
+  open-graph: true
+  twitter-card:
+    creator: "@chuckwallainst"
+    site: "@chuckwallainst"
+    card-style: summary_large_image
+  search:
+    location: navbar
+    type: overlay
   navbar:
     background: primary
     left:
@@ -42,6 +53,39 @@ format:
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:wght@500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+        <meta name="googlebot" content="index, follow">
+        <meta name="keywords" content="quantum electrodynamics, QED, Wheeler-DeWitt equation, Casimir effect, cosmological constant, Olbers paradox, Boltzmann brains, Unruh effect, philosophy of physics, Everett interpretation, theoretical physics, vacuum energy, Six Mile Spring, Pahrump, Nevada">
+        <meta name="author" content="Chuck Walla Institute of Advanced Physics">
+        <meta name="theme-color" content="#7a3b1f">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="Chuck Walla Institute of Advanced Physics">
+        <meta property="og:image" content="https://chuckwalla.institute/assets/crest.svg">
+        <meta property="og:image:alt" content="Crest of the Chuck Walla Institute of Advanced Physics">
+        <link rel="alternate" type="application/rss+xml" title="Chuck Walla Institute — Notes &amp; Preprints" href="https://chuckwalla.institute/posts.xml">
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ResearchOrganization",
+          "name": "Chuck Walla Institute of Advanced Physics",
+          "alternateName": "CWI",
+          "url": "https://chuckwalla.institute",
+          "logo": "https://chuckwalla.institute/assets/crest.svg",
+          "foundingDate": "1974",
+          "description": "An independent research institute publishing notes and preprints in theoretical physics, observational cosmology, and the philosophy of physics.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Six Mile Spring",
+            "addressRegion": "NV",
+            "addressCountry": "US"
+          },
+          "sameAs": [
+            "https://chuckwalla.institute/about.html",
+            "https://chuckwalla.institute/people.html"
+          ]
+        }
+        </script>
     html-math-method: mathjax
     css: styles.css
 
