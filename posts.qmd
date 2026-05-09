@@ -11,4 +11,5 @@ listing:
   fields: [date, title, author, categories, description, reading-time]
 page-layout: full
 title-block-banner: false
+suppress-bibliography: true
 ---
